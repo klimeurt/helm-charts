@@ -8,7 +8,7 @@ This is a Helm charts repository for the `secflow-collector` application - a Git
 
 ## Chart Structure
 
-The main chart is located in `secflow-collector/` and follows standard Helm conventions:
+The main chart is located in `charts/secflow-collector/` and follows standard Helm conventions:
 - `Chart.yaml` - Chart metadata and dependencies
 - `values.yaml` - Default configuration values
 - `templates/` - Kubernetes manifest templates
@@ -28,17 +28,17 @@ The application requires these key configurations in `values.yaml`:
 
 Validate chart syntax:
 ```bash
-helm lint secflow-collector/
+helm lint charts/secflow-collector/
 ```
 
 Render templates locally:
 ```bash
-helm template secflow-collector secflow-collector/
+helm template secflow-collector charts/secflow-collector/
 ```
 
 Install/upgrade chart:
 ```bash
-helm upgrade --install secflow-collector secflow-collector/ --set github.organization=YOUR_ORG
+helm upgrade --install secflow-collector charts/secflow-collector/ --set github.organization=YOUR_ORG
 ```
 
 ## Application Architecture
