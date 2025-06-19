@@ -1,0 +1,52 @@
+# Default values for secflow-collector.
+
+replicaCount: 1
+
+image:
+  repository: ghcr.io/klimeurt/secflow-collector
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+github:
+  organization: "your-org-name"
+  tokenSecretName: "github-token"
+  tokenSecretKey: "token"
+
+nats:
+  url: "nats://nats:4222"
+  subject: "repositories"
+
+cron:
+  schedule: "0 0 * * 0"  # Weekly on Sunday
+  runOnStartup: true     # Run immediately after deployment
+
+env: []
+
+livenessProbe:
+  enabled: false
+
+readinessProbe:
+  enabled: false
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
