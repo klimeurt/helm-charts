@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "secflow-collector.fullname" . }}
+  labels:
+    {{- include "secflow-collector.labels" . | nindent 4 }}
+data:
+  GITHUB_ORG: {{ .Values.github.organization | quote }}
+  NATS_URL: {{ .Values.nats.url | quote }}
+  NATS_SUBJECT: {{ .Values.nats.subject | quote }}
+  CRON_SCHEDULE: {{ .Values.cron.schedule | quote }}
+  RUN_ON_STARTUP: {{ .Values.cron.runOnStartup | quote }}
