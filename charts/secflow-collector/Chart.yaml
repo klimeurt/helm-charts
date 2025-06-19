@@ -5,10 +5,10 @@ description: A Helm chart for a tool that fetches repositories and publishes to 
 type: application
 
 # Chart version - increment for each release
-version: 0.1.0
+version: 0.1.1
 
 # Application version
-appVersion: "0.1.0"
+appVersion: "0.1.1"
 
 keywords:
   - github
