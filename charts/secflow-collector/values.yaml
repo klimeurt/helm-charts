@@ -28,9 +28,7 @@ github:
   tokenSecretKey: "token"
 
 nats:
-  # Enable NATS subchart dependency
-  enabled: false
-  url: "nats://nats:4222"
+  url: "nats://nats-server:4222"
   subject: "repositories"
 
 cron:

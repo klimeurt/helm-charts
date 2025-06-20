@@ -5,7 +5,7 @@ description: A Helm chart for a tool that fetches repositories and publishes to 
 type: application
 
 # Chart version - increment for each release
-version: 0.1.2
+version: 0.1.3
 
 # Application version
 appVersion: "1.0.0"
@@ -25,9 +25,3 @@ maintainers:
   - name: Ivan Giacomelli
     email: ivan@nopsled.it
 
-# Dependencies (if using NATS as subchart)
-dependencies:
-  - name: nats
-    version: "1.3.7"
-    repository: "https://nats-io.github.io/k8s/helm/charts/"
-    condition: nats.enabled
